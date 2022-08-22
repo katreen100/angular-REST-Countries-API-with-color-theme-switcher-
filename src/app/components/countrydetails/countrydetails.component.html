@@ -1,0 +1,45 @@
+<div class="my-5 px-5">
+  <app-backbutton></app-backbutton>
+<div class="row container  my-5">
+    <div class="col-lg-6 ">
+      <img class="card-img" [src]="countryDetails.flags.png" />
+    </div>
+    <div class="col-md-6 row">
+      <h4 class="col-12">{{ countryDetails.name.common }}</h4>
+      <div class="col-md-6 ">
+        <strong class="title">Native Name: </strong>
+        <span class="property">
+          {{ countryDetails.name.nativeName.eng.off }}
+        </span>
+        <br />
+        <strong class="title">Population: </strong>
+        <span class="property">{{ countryDetails.population }}</span>
+        <br />
+        <strong class="title">Region: </strong>
+        <span class="property">{{ countryDetails.region }}</span>
+        <br />
+        <strong class="title"> Sub Region: </strong>
+        <span class="property">{{ countryDetails.subregion }}</span>
+        <br />
+        <strong class="title">Capital: </strong>
+        <span class="property">{{countryDetails.capital}}</span>
+      </div>
+      <div class="col-6">
+        <strong class="title">Top Level Domain </strong>
+        <span class="property">{{countryDetails.population}}</span>
+        <br />
+  
+        <strong class="title">Currencies: </strong>
+  
+        <span class="property">{{countryDetails.currencies}}</span>
+  
+        <br />
+        <strong class="title">Languages: </strong>
+        <span class="property">{{countryDetails.region}}</span>
+        <br />
+      </div>
+      <div class="col-12"></div>
+    </div>
+  </div>
+</div>
+  

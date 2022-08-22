@@ -1,0 +1,30 @@
+
+<app-regonfiltration (region)="onregionchange($event)"></app-regonfiltration>
+<div class="container " >
+<div class="row" >
+  
+  <div class="col-md-3 mb-5 country-card"  *ngFor="let country of countries">
+    <img
+      class="country-img"
+      [src]="country.flags.png"
+      height="145px"
+      alt={{country.name.common}}
+    />
+    <div [ngClass]="{ 'shadow-sm countrycard-body bg-white p-3': lightmood, 'shadow-sm countrycard-body p-3 darkmooddiv': ! lightmood}">
+      <h6 class="country-title">
+        <a  [routerLink]="['countrydetails/',country.name.common]"   [ngClass]="{ 'country-title': lightmood, 'country-title pt-2 titlecolorDarkmood': ! lightmood}" href="#">{{country.name.common}}</a>
+        
+      </h6>
+      <strong class="title">Population: </strong>
+      <span class="property">{{country.population}}</span>
+      <br />
+      <strong class="title">Region: </strong>
+      <span class="property">{{country.region}}</span>
+      <br />
+      <strong class="title">Capital: </strong>
+      <span class="property">{{country.capital}}</span>
+     
+    </div>
+  </div>
+</div>
+</div>
